@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Device-Dynamixel
-version:            0.023
+version:            0.024
 abstract:           Simple control of Robotis Dynamixel servo motors
 author:
     - Dima Kogan <dkogan@cpan.org>
@@ -12,7 +12,7 @@ build_requires:
     ExtUtils::MakeMaker:  0
 requires:
     Const::Fast:  0
-    perl:         5.1
+    perl:         5.10
     Test::More:   0
 no_index:
     directory:
