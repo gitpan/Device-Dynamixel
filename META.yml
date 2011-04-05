@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Device-Dynamixel
-version:            0.025
+version:            0.026
 abstract:           Simple control of Robotis Dynamixel servo motors
 author:
     - Dima Kogan <dkogan@cpan.org>

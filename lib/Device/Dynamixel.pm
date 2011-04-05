@@ -12,7 +12,7 @@ Device::Dynamixel - Simple control of Robotis Dynamixel servo motors
 
 =cut
 
-our $VERSION = '0.025';
+our $VERSION = '0.026';
 
 
 =head1 SYNOPSIS
@@ -119,6 +119,7 @@ with a value
  $Device::Dynamixel::baudrateValues{$baud}
 
 The available baud rates are
+
  1000000
  500000
  400000
@@ -238,9 +239,18 @@ sub new
 {
   my ($classname, $pipe) = @_;
 
-  my $this = {pipe => $pipe};
+  my $this = {};
   bless($this, $classname);
 
+  return $this->_init($pipe);
+}
+
+sub _init
+{
+  my $this = shift;
+  my $pipe = shift;
+
+  $this->{pipe} = $pipe;
   return $this;
 }
 
